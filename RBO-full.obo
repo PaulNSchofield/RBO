@@ -1,5 +1,6 @@
 format-version: 1.2
-data-version: RBO/releases/2020-12-29/RBO-full.owl
+data-version: RBO/releases/2020-12-30/RBO-full.owl
+subsetdef: attribute_slim ""
 subsetdef: EnvO-Lite-GSC ""
 subsetdef: goslim_aspergillus ""
 subsetdef: goslim_candida ""
@@ -17,12 +18,13 @@ subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
 subsetdef: reference ""
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
+subsetdef: scalar_slim ""
 subsetdef: TraitNet ""
 ontology: RBO/RBO-full
 property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Radiation Biology Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/unspecified
-property_value: owl:versionInfo "2020-12-29" xsd:string
+property_value: owl:versionInfo "2020-12-30" xsd:string
 
 [Term]
 id: APOLLO_SV:00000008
@@ -152,6 +154,24 @@ property_value: IAO:0000602 "(iff (Process a) (and (Occurrent a) (exists (b) (pr
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
+id: BFO:0000016
+name: disposition
+is_a: BFO:0000017 ! realizable entity
+disjoint_from: BFO:0000023 ! role
+property_value: BFO:0000179 "disposition" xsd:string
+property_value: BFO:0000180 "Disposition" xsd:string
+property_value: IAO:0000112 "an atom of element X has the disposition to decay to an atom of element Y" xsd:string
+property_value: IAO:0000112 "certain people have a predisposition to colon cancer" xsd:string
+property_value: IAO:0000112 "children are innately disposed to categorize objects in certain ways." xsd:string
+property_value: IAO:0000112 "the cell wall is disposed to filter chemicals in endocytosis and exocytosis" xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: Dispositions exist along a strength continuum. Weaker forms of disposition are realized in only a fraction of triggering cases. These forms occur in a significant number of cases of a similar type." xsd:string
+property_value: IAO:0000600 "b is a disposition means: b is a realizable entity & b’s bearer is some material entity & b is such that if it ceases to exist, then its bearer is physically changed, & b’s realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/062-002"}
+property_value: IAO:0000601 "If b is a realizable entity then for all t at which b exists, b s-depends_on some material entity at t. (axiom label in BFO2 Reference: [063-002])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/063-002"}
+property_value: IAO:0000602 "(forall (x t) (if (and (RealizableEntity x) (existsAt x t)) (exists (y) (and (MaterialEntity y) (specificallyDepends x y t))))) // axiom label in BFO2 CLIF: [063-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/063-002"}
+property_value: IAO:0000602 "(forall (x) (if (Disposition x) (and (RealizableEntity x) (exists (y) (and (MaterialEntity y) (bearerOfAt x y t)))))) // axiom label in BFO2 CLIF: [062-002] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/062-002"}
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
 id: BFO:0000017
 name: realizable entity
 def: "A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances." []
@@ -269,6 +289,20 @@ property_value: IAO:0000602 "(iff (GenericallyDependentContinuant a) (and (Conti
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
+id: BFO:0000034
+name: function
+is_a: BFO:0000016 ! disposition
+property_value: BFO:0000179 "function" xsd:string
+property_value: BFO:0000180 "Function" xsd:string
+property_value: IAO:0000112 "the function of a hammer to drive in nails" xsd:string
+property_value: IAO:0000112 "the function of a heart pacemaker to regulate the beating of a heart through electricity" xsd:string
+property_value: IAO:0000112 "the function of amylase in saliva to break down starch into sugar" xsd:string
+property_value: IAO:0000116 "BFO 2 Reference: In the past, we have distinguished two varieties of function, artifactual function and biological function. These are not asserted subtypes of BFO:function however, since the same function – for example: to pump, to transport – can exist both in artifacts and in biological entities. The asserted subtypes of function that would be needed in order to yield a separate monoheirarchy are not artifactual function, biological function, etc., but rather transporting function, pumping function, etc." xsd:string
+property_value: IAO:0000600 "A function is a disposition that exists in virtue of the bearer’s physical make-up and this physical make-up is something the bearer possesses because it came into being, either through evolution (in the case of natural biological entities) or through intentional design (in the case of artifacts), in order to realize processes of a certain sort. (axiom label in BFO2 Reference: [064-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/064-001"}
+property_value: IAO:0000602 "(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] " xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/064-001"}
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
 id: BFO:0000040
 name: material entity
 def: "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time." []
@@ -303,6 +337,15 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 id: BFO:0000141
 name: immaterial entity
 is_a: BFO:0000004 ! independent continuant
+
+[Term]
+id: BFO:0000182
+name: history
+is_a: BFO:0000015 ! process
+property_value: BFO:0000179 "history" xsd:string
+property_value: BFO:0000180 "History" xsd:string
+property_value: IAO:0000600 "A history is a process that is the sum of the totality of processes taking place in the spatiotemporal region occupied by a material entity or site, including processes on the surface of the entity or within the cavities to which it serves as host. (axiom label in BFO2 Reference: [138-001])" xsd:string {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/138-001"}
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
 id: CARO:0000000
@@ -733,31 +776,29 @@ name: food component
 is_a: CHEBI:52211 ! physiological role
 
 [Term]
-id: CHMO:0000001
-name: colorimetry
-def: "The determination of the spectral absorbance of a solution. This method is often used to determine the concentration of a chemical in a solution." [https://orcid.org/0000-0002-0640-0422]
-synonym: "colorimetric method" EXACT []
-synonym: "colourimetry" EXACT []
+id: CHMO:0000993
+name: portion of material
+def: "An independent material continuant that is self-connected and retains its identity over time." [https://orcid.org/0000-0001-5985-7429]
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: CHMO:0002793
+name: sensor
+def: "A piece of apparatus that is used to measure a physical quantity." [https://orcid.org/0000-0001-5985-7429]
+is_a: OBI:0000968 ! device
+
+[Term]
+id: CHMO:0002796
+name: dosimetry
+def: "Measurement of the dose of a substance taken up by an object." [https://doi.org/10.1039/9781847559753-00013]
 is_a: OBI:0000070 ! assay
+relationship: BFO:0000057 CHMO:0002797 ! has participant dosimeter
 
 [Term]
-id: CHMO:0000002
-name: gravimetric sorption analysis
-def: "The determination of the mass of a gas or vapour adsorbed to a surface." [https://orcid.org/0000-0002-0640-0422]
-synonym: "gravimetric sorption" EXACT []
-synonym: "gravimetric sorption-desorption" EXACT []
-synonym: "gravimetric sorption-desorption analysis" EXACT []
-synonym: "gravimetric sorption/desorption" EXACT []
-synonym: "gravimetric sorption/desorption analysis" EXACT []
-is_a: CHMO:0002739 ! quantitative determination method
-
-[Term]
-id: CHMO:0002739
-name: quantitative determination method
-def: "A measurement method which obtains the concentration or quantity of a specified substance in an analyte." [https://orcid.org/0000-0001-5985-7429]
-is_a: OBI:0000443 ! analyte assay
-created_by: batchelorc
-creation_date: 2012-04-13T11:50:09Z
+id: CHMO:0002797
+name: dosimeter
+def: "A sensor that is used to measure the dose of a substance taken by up an object." [https://doi.org/10.1039/9781847559753-00013]
+is_a: CHMO:0002793 ! sensor
 
 [Term]
 id: ENVO:00000000
@@ -2405,6 +2446,14 @@ relationship: RO:0000057 ENVO:00010483 ! has participant environmental material
 property_value: IAO:0000116 "Requires addition of waves for full axiomatisation. This should be linked to \"subatomic particle\" with an \"or\". Note that ENVO represents space as an environmental material (a hard vacuum with sparse material inclusions)." xsd:string
 
 [Term]
+id: ENVO:01001024
+name: particle radiation
+def: "A radiation process during which energy is transmitted or emitted by means of fast-moving subatomic particles." [https://en.wikipedia.org/wiki/Particle_radiation]
+subset: environmental_hazards
+subset: envoAstro
+is_a: ENVO:01001023 ! radiation
+
+[Term]
 id: ENVO:01001026
 name: electromagnetic radiation
 def: "A radiation process during which waves (or their quanta, photons) of the electromagnetic field propagate (radiate) through space carrying electromagnetic energy." [https://en.wikipedia.org/wiki/Electromagnetic_radiation]
@@ -2760,6 +2809,37 @@ is_a: ENVO:01001026 ! electromagnetic radiation
 intersection_of: ENVO:01001026 ! electromagnetic radiation
 intersection_of: RO:0002608 ENVO:01000801 ! process has causal agent star
 relationship: RO:0002608 ENVO:01000801 ! process has causal agent star
+
+[Term]
+id: ENVO:01001217
+name: X-ray stellar radiation
+namespace: ENVO
+def: "A stellar radiation process during which penetrating electromagnetic radiation is emitted by high-energy electrons as they fall into a lower state of energy." [https://en.wikipedia.org/wiki/X-ray]
+comment: Ambiguity exists in the definition of x-rays and their differentiation from gamma rays. Photons with sufficient energy to be classified as x-rays may be emitted by other processes than electrons falling to lower energy states. Most x-rays have wavelengths ranging from 0.01 to 10 nanometers, corresponding to frequencies in the range of 30 petahertz to 30 exahertz and energies in the range of 100 eV to 100 keV. {xref="https://en.wikipedia.org/wiki/X-ray#Energy_ranges"}
+subset: environmental_hazards
+subset: envoAstro
+synonym: "x ray stellar radiation" EXACT []
+synonym: "X-ray radiation" EXACT []
+synonym: "X-ray solar radiation" NARROW []
+synonym: "X-ray stellar radiation" EXACT []
+is_a: ENVO:01001219 ! ionizing stellar radiation
+is_a: ENVO:21001217 ! X-ray radiation
+intersection_of: ENVO:21001217 ! X-ray radiation
+intersection_of: RO:0002608 ENVO:01000801 ! process has causal agent star
+property_value: IAO:0000114 IAO:0000428
+
+[Term]
+id: ENVO:01001219
+name: ionizing stellar radiation
+namespace: ENVO
+def: "A stellar radiation process during which electromagnetic waves or their quanta are emitted from a star with sufficient energy to disrupt molecular bonds or alter the electron number of atoms." [https://en.wikipedia.org/wiki/Electromagnetic_radiation, https://en.wikipedia.org/wiki/Solar_irradiance]
+subset: envoAstro
+synonym: "ionising solar radiation" NARROW []
+synonym: "ionising stellar radiation" EXACT []
+is_a: ENVO:01001211 ! stellar radiation
+is_a: ENVO:21001219 ! ionizing radiation
+intersection_of: ENVO:21001219 ! ionizing radiation
+intersection_of: RO:0002608 ENVO:01000801 ! process has causal agent star
 
 [Term]
 id: ENVO:01001226
@@ -3791,6 +3871,27 @@ relationship: part_of ENVO:01001000 ! environmental system determined by an orga
 relationship: RO:0002509 UBERON:0001062 ! determined by part of anatomical entity
 
 [Term]
+id: ENVO:21001217
+name: X-ray radiation
+namespace: ENVO
+def: "A radiation process during which penetrating electromagnetic radiation is emitted by high-energy electrons as they fall into a lower state of energy." [https://en.wikipedia.org/wiki/X-ray]
+subset: environmental_hazards
+synonym: "X ray radiation" EXACT []
+synonym: "X-ray" RELATED [NCIT:C17262]
+xref: NCIT:C17262
+is_a: ENVO:21001219 ! ionizing radiation
+property_value: IAO:0000114 IAO:0000428
+
+[Term]
+id: ENVO:21001219
+name: ionizing radiation
+namespace: ENVO
+def: "A radiation process during which electromagnetic waves or their quanta are emitted with sufficient energy to disrupt molecular bonds or alter the electron number of atoms." [https://en.wikipedia.org/wiki/Electromagnetic_radiation]
+synonym: "ionising radiation" EXACT []
+xref: NCIT:C17052
+is_a: ENVO:01001026 ! electromagnetic radiation
+
+[Term]
 id: ENVO:3100011
 name: concentration of dioxygen in liquid water
 def: "The concentration of dioxygen when measured in liquid water." []
@@ -4109,6 +4210,20 @@ property_value: IAO:0000116 "Alternative previous definition: a plan is a set of
 property_value: IAO:0000117 "Alan Ruttenberg" xsd:string
 property_value: IAO:0000119 "OBI Plan and Planned Process branch" xsd:string
 property_value: IAO:0000119 "OBI_0000344" xsd:string
+
+[Term]
+id: IAO:0000109
+name: measurement datum
+def: "A measurement datum is an information content entity that is a recording of the output of a measurement such as produced by a device." []
+is_a: IAO:0000027 ! data item
+relationship: OBI:0001938 OBI:0001933 ! has value specification value specification
+property_value: IAO:0000111 "measurement datum" xsd:string
+property_value: IAO:0000112 "Examples of measurement data are the recoding of the weight of a mouse as {40,mass,\"grams\"}, the recording of an observation of the behavior of the mouse {,process,\"agitated\"}, the recording of the expression level of a gene as measured through the process of microarray experiment {3.4,luminosity,}." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "2/2/2009 is_specified_output of some assay?" xsd:string
+property_value: IAO:0000117 "person:Chris Stoeckert" xsd:string
+property_value: IAO:0000119 group:OBI xsd:string
+property_value: IAO:0000119 "OBI_0000305" xsd:string
 
 [Term]
 id: IAO:0000178
@@ -4658,10 +4773,18 @@ property_value: IAO:0000117 "PERSON: Susanna Sansone" xsd:string
 property_value: IAO:0000119 "GROUP: OBI" xsd:string
 
 [Term]
-id: OBI:0000443
-name: analyte assay
-def: "An assay with the objective to capture information about the presence, concentration or amount of an analyte in the evaluant." [obi:ar, obi:bp, obi:hp, obi:ppb, obi:prs]
-is_a: OBI:0000070 ! assay
+id: OBI:0000338
+name: drawing a conclusion based on data
+def: "A planned process in which data gathered in an investigation is evaluated in the context of existing knowledge with the objective to generate more general conclusions or to conclude that the data does not allow one to draw general conclusion" []
+is_a: OBI:0000011 ! planned process
+relationship: OBI:0000293 IAO:0000027 ! has_specified_input data item
+relationship: OBI:0000299 OBI:0001909 ! has_specified_output conclusion based on data
+property_value: IAO:0000111 "interpreting data" xsd:string
+property_value: IAO:0000112 "Concluding that a gene is upregulated in a tissue sample based on the band intensity in a western blot.  Concluding that a patient has a infection based on measurement of an elevated body temperature and reported headache. Concluding that there were problems in an investigation because data from PCR and microarray are conflicting. Concluding that 'defects in gene XYZ cause cancer due to improper DNA repair' based on data from experiments in that study that gene XYZ is involved in DNA repair, and the conclusion of a previous study that cancer patients have an increased number of mutations in this gene. " xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "PERSON: Bjoern Peters" xsd:string
+property_value: IAO:0000117 "PERSON: Jennifer Fostel" xsd:string
+property_value: IAO:0000119 "Bjoern Peters" xsd:string
 
 [Term]
 id: OBI:0000450
@@ -4935,6 +5058,32 @@ property_value: IAO:0000117 "Bjoern Peters" xsd:string
 property_value: IAO:0000119 "Bjoern Peters" xsd:string
 
 [Term]
+id: OBI:0000968
+name: device
+alt_id: CHMO:0000998
+def: "A material entity that is designed to perform a function in a scientific investigation, but is not a reagent." [obi:obi]
+is_a: CHMO:0000993 ! portion of material
+is_a: OBI:0000047 ! processed material
+relationship: RO:0000085 BFO:0000034 ! has function function
+property_value: IAO:0000111 "device" xsd:string
+property_value: IAO:0000112 "A voltmeter is a measurement device which is intended to perform some measure function." xsd:string
+property_value: IAO:0000112 "An autoclave is a device that sterlizes instruments or contaminated waste by applying high temperature and pressure." xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000116 "2012-12-17 JAO: In common lab usage, there is a distinction made between devices and reagents that is difficult to model. Therefore we have chosen to specifically exclude reagents from the definition of \"device\", and are enumerating the types of roles that a reagent can perform.\n\n2013-6-5 MHB: The following clarifications are outcomes of the May 2013 Philly Workshop. Reagents are distinguished from devices that also participate in scientific techniques by the fact that reagents are chemical or biological in nature and necessarily participate in some chemical interaction or reaction during the realization of their experimental role. By contrast, devices do not participate in such chemical reactions/interactions.  Note that there are cases where devices use reagent components during their operation, where the reagent-device distinction is less clear.  For example:\n\n(1) An HPLC machine is considered a device, but has a column that holds a stationary phase resin as an operational component.  This resin qualifies as a device if it participates purely in size exclusion, but bears a reagent role that is realized in the running of a column if it interacts electrostatically or chemically with the evaluant. The container the resin is in (“the column”) considered alone is a device. So the entire column as well as the entire HPLC machine are devices that have a reagent as an operating part.\n\n(2) A pH meter is a device, but its electrode component bears a reagent role in virtue of its interacting directly with the evaluant in execution of an assay.\n\n(3) A gel running  box  is a device that has a metallic lead as a component that participates in a chemical reaction with the running buffer when a charge is passed through it.  This metallic lead is considered to have a reagent role as a component of this device realized in the running of a gel.\n\nIn the examples above, a reagent is an operational component of a device, but the device itself does not realize a reagent role (as bearing a reagent role is not transitive across the part_of relation).  In this way, the asserted disjointness between a reagent and device holds, as both roles are never realized in the same bearer during execution of an assay.  " xsd:string
+property_value: IAO:0000117 "PERSON: Helen Parkinson" xsd:string
+property_value: IAO:0000118 "instrument" xsd:string
+property_value: IAO:0000119 "OBI development call 2012-12-17." xsd:string
+
+[Term]
+id: OBI:0000984
+name: dose
+def: "A measurement datum that measures the quantity of something that may be administered to an organism or that an organism may be exposed to. Quantities of nutrients, drugs, vaccines and toxins are referred to as doses." []
+is_a: IAO:0000109 ! measurement datum
+property_value: IAO:0000111 "dose" xsd:string
+property_value: IAO:0000112 "An organism has been injected 1ml of vaccine" xsd:string
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
 id: OBI:0001000
 name: questionnaire
 def: "A document with a set of printed or written questions with a choice of answers, devised for the purposes of a survey or statistical study." []
@@ -4945,6 +5094,20 @@ property_value: IAO:0000116 "JT: It plays a role in collecting data that could b
 property_value: IAO:0000116 "Need to clarify if this is a document or a directive information entity (or what their connection is))" xsd:string
 property_value: IAO:0000117 "PERSON: Jessica Turner" xsd:string
 property_value: IAO:0000119 "Merriam-Webster" xsd:string
+
+[Term]
+id: OBI:0001909
+name: conclusion based on data
+def: "An information content entity that is inferred from data." []
+is_a: IAO:0000030 ! information content entity
+relationship: OBI:0000124 IAO:0000027 ! is_supported_by_data data item
+relationship: OBI:0000312 OBI:0000338 ! is_specified_output_of drawing a conclusion based on data
+property_value: IAO:0000111 "conclusion based on data" xsd:string
+property_value: IAO:0000112 "The conclusion that a gene is upregulated in a tissue sample based on the band intensity in a western blot. The conclusion that a patient has a infection based on measurement of an elevated body temperature and reported headache. The conclusion that there were problems in an investigation because data from PCR and microarray are conflicting.\nThe following are NOT conclusions based on data: data themselves; results from pure mathematics, e.g. \"13 is prime\"." xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000116 "In the Philly 2013 workshop, we recognized the limitations of \"conclusion textual entity\", and we introduced this as more general. The need for the 'textual entity' term going forward is up for future debate. " xsd:string
+property_value: IAO:0000117 "Group:2013 Philly Workshop group" xsd:string
+property_value: IAO:0000119 "Group:2013 Philly Workshop group" xsd:string
 
 [Term]
 id: OBI:0001930
@@ -5671,8 +5834,12 @@ is_a: PATO:0000992 ! viscosity
 [Term]
 id: PATO:0001018
 name: physical quality
-def: "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities." []
+namespace: quality
+alt_id: PATO:0002079
+def: "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities." [PATOC:GVG]
+subset: attribute_slim
 synonym: "relational physical quality" EXACT []
+xref: Wikipedia:Physical_property
 is_a: PATO:0001241 ! physical object quality
 
 [Term]
@@ -5684,7 +5851,11 @@ is_a: PATO:0000052 ! shape
 [Term]
 id: PATO:0001241
 name: physical object quality
-def: "A quality which inheres in a continuant." []
+namespace: quality
+alt_id: PATO:0001237
+alt_id: PATO:0001238
+def: "A quality which inheres in a continuant." [PATOC:GVG]
+comment: Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.
 synonym: "monadic quality of a continuant" EXACT []
 synonym: "monadic quality of an object" NARROW []
 synonym: "monadic quality of continuant" NARROW []
@@ -5693,6 +5864,7 @@ synonym: "quality of a continuant" EXACT []
 synonym: "quality of a single physical entity" EXACT []
 synonym: "quality of an object" EXACT []
 synonym: "quality of continuant" EXACT []
+xref: snap:Quality
 is_a: BFO:0000019 ! quality
 is_a: PATO:0000001 ! quality
 property_value: IAO:0000111 "physical object quality" xsd:string
@@ -5828,8 +6000,19 @@ is_a: PATO:0002305 ! increased object quality
 [Term]
 id: PATO:0001739
 name: radiation quality
-def: "A quality that inheres in an bearer by virtue of how that bearer interacts with radiation." []
+namespace: quality
+def: "A quality that inheres in an bearer by virtue of how that bearer interacts with radiation." [PATOC:GVG]
+subset: attribute_slim
 is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0001744
+name: radiation exposure
+namespace: quality
+def: "A radiation quality inhering in a bearer by virtue of what the bearer receives as a result of being exposed to ionizing radiation." [hps:hps]
+subset: attribute_slim
+subset: scalar_slim
+is_a: PATO:0001739 ! radiation quality
 
 [Term]
 id: PATO:0001759
@@ -9846,6 +10029,10 @@ domain: BFO:0000015 ! process
 range: BFO:0000017 ! realizable entity
 
 [Typedef]
+id: BFO:0000057
+name: has participant
+
+[Typedef]
 id: BFO:0000062
 name: preceded by
 def: "x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." []
@@ -9942,6 +10129,19 @@ domain: BFO:0000001 ! entity
 range: IAO:0000030 ! information content entity
 
 [Typedef]
+id: OBI:0000124
+name: is_supported_by_data
+def: "The relation between a data item and a conclusion where the conclusion is the output of a data interpreting process and the data item is used as an input to that process" []
+property_value: IAO:0000111 "is_supported_by_data" xsd:string
+property_value: IAO:0000112 "The relation between the conclusion \"Gene tpbA is involved in EPS production\" and the data items produced using two sets of organisms, one being a tpbA knockout, the other being tpbA wildtype tested in polysacharide production assays and analyzed using an ANOVA. " xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "OBI" xsd:string
+property_value: IAO:0000119 "OBI" xsd:string
+property_value: IAO:0000119 "Philly 2011 workshop" xsd:string
+domain: OBI:0001909 ! conclusion based on data
+range: IAO:0000027 ! data item
+
+[Typedef]
 id: OBI:0000293
 name: has_specified_input
 def: "A relation between a planned process and a continuant participating in that process that is not created during  the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of." []
@@ -10026,6 +10226,18 @@ domain: IAO:0000005 ! objective specification
 range: OBI:0000011 ! planned process
 
 [Typedef]
+id: OBI:0001938
+name: has value specification
+def: "A relation between an information content entity and a value specification that specifies its value." []
+property_value: IAO:0000111 "has value specification" xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000117 "PERSON: James A. Overton" xsd:string
+property_value: IAO:0000119 "OBI" xsd:string
+domain: IAO:0000030 ! information content entity
+range: OBI:0001933 ! value specification
+is_a: has_part ! has part
+
+[Typedef]
 id: RO:0000052
 name: inheres in
 def: "a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence" []
@@ -10099,6 +10311,18 @@ domain: BFO:0000020 ! specifically dependent continuant
 range: BFO:0000031 ! generically dependent continuant
 
 [Typedef]
+id: RO:0000079
+name: function of
+def: "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence" []
+property_value: IAO:0000112 "this catalysis function is a function of this enzyme" xsd:string
+property_value: IAO:0000116 "A function inheres in its bearer at all times for which the function exists, however the function need not be realized at all the times that the function exists." xsd:string
+property_value: IAO:0000118 "function_of" xsd:string
+property_value: IAO:0000118 "is function of" xsd:string
+domain: BFO:0000034 ! function
+is_a: RO:0000052 ! inheres in
+inverse_of: RO:0000085 ! has function
+
+[Typedef]
 id: RO:0000081
 name: role of
 def: "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence" []
@@ -10108,6 +10332,17 @@ property_value: IAO:0000118 "is role of" xsd:string
 property_value: IAO:0000118 "role_of" xsd:string
 is_a: RO:0000052 ! inheres in
 inverse_of: RO:0000087 ! has role
+
+[Typedef]
+id: RO:0000085
+name: has function
+def: "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence" []
+property_value: IAO:0000112 "this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)" xsd:string
+property_value: IAO:0000116 "A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists." xsd:string
+property_value: IAO:0000118 "has_function" xsd:string
+domain: BFO:0000004 ! independent continuant
+range: BFO:0000034 ! function
+is_a: RO:0000053 ! bearer of
 
 [Typedef]
 id: RO:0000086

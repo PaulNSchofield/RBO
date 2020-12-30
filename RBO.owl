@@ -11,6 +11,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:envo="http://purl.obolibrary.org/obo/envo#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:pato="http://purl.obolibrary.org/obo/pato#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
@@ -21,11 +22,11 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:oboInOwl1="oboInOwl:">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/RBO.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/RBO/releases/2020-12-29/RBO.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/RBO/releases/2020-12-30/RBO.owl"/>
         <dc:description>None</dc:description>
         <dc:title>Radiation Biology Ontology</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-12-29</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-12-30</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -101,12 +102,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000231 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000231"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000232"/>
@@ -164,12 +159,6 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0010000 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0010000"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001"/>
     
 
 
@@ -344,6 +333,22 @@
     <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#has_rank -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#has_rank"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pato#attribute_slim -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/pato#attribute_slim">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pato#scalar_slim -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/pato#scalar_slim">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -659,6 +664,15 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000057 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000057">
+        <oboInOwl:id>BFO:0000057</oboInOwl:id>
+        <rdfs:label>has participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000062 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000062">
@@ -808,6 +822,23 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0000124 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000124">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OBI_0001909"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000111>is_supported_by_data</obo:IAO_0000111>
+        <obo:IAO_0000112>The relation between the conclusion &quot;Gene tpbA is involved in EPS production&quot; and the data items produced using two sets of organisms, one being a tpbA knockout, the other being tpbA wildtype tested in polysacharide production assays and analyzed using an ANOVA. </obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115>The relation between a data item and a conclusion where the conclusion is the output of a data interpreting process and the data item is used as an input to that process</obo:IAO_0000115>
+        <obo:IAO_0000117>OBI</obo:IAO_0000117>
+        <obo:IAO_0000119>OBI</obo:IAO_0000119>
+        <obo:IAO_0000119>Philly 2011 workshop</obo:IAO_0000119>
+        <rdfs:label>is_supported_by_data</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000293 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000293">
@@ -931,6 +962,22 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0001938 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0001938">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
+        <obo:IAO_0000111>has value specification</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115>A relation between an information content entity and a value specification that specifies its value.</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON: James A. Overton</obo:IAO_0000117>
+        <obo:IAO_0000119>OBI</obo:IAO_0000119>
+        <rdfs:label>has value specification</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
@@ -1031,6 +1078,22 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0000079 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000079">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <obo:IAO_0000112 xml:lang="en">this catalysis function is a function of this enzyme</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A function inheres in its bearer at all times for which the function exists, however the function need not be realized at all the times that the function exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">function_of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">is function of</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">function of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0000081 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000081">
@@ -1042,6 +1105,21 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">is role of</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">role_of</obo:IAO_0000118>
         <rdfs:label xml:lang="en">role of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000085 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000085">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <obo:IAO_0000112 xml:lang="en">this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_function</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">has function</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -3149,7 +3227,9 @@ For example, A and B may be gene products and binding of B by A positively regul
         <obo:IAO_0000602>(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] </obo:IAO_0000602>
         <obo:IAO_0000602>(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] </obo:IAO_0000602>
         <obo:IAO_0000602>(forall (x) (if (Material Entity x) (exists (t) (and (TemporalRegion t) (existsAt x t))))) // axiom label in BFO2 CLIF: [011-002] </obo:IAO_0000602>
+        <oboInOwl:id>BFO:0000002</oboInOwl:id>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label>continuant</rdfs:label>
         <rdfs:label xml:lang="en">continuant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3392,6 +3472,52 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
         <owl:annotatedTarget>(iff (Process a) (and (Occurrent a) (exists (b) (properTemporalPartOf b a)) (exists (c t) (and (MaterialEntity c) (specificallyDependsOnAt a c t))))) // axiom label in BFO2 CLIF: [083-003] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/083-003"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <obo:BFO_0000179>disposition</obo:BFO_0000179>
+        <obo:BFO_0000180>Disposition</obo:BFO_0000180>
+        <obo:IAO_0000112 xml:lang="en">an atom of element X has the disposition to decay to an atom of element Y</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">certain people have a predisposition to colon cancer</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">children are innately disposed to categorize objects in certain ways.</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the cell wall is disposed to filter chemicals in endocytosis and exocytosis</obo:IAO_0000112>
+        <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: Dispositions exist along a strength continuum. Weaker forms of disposition are realized in only a fraction of triggering cases. These forms occur in a significant number of cases of a similar type.</obo:IAO_0000116>
+        <obo:IAO_0000600 xml:lang="en">b is a disposition means: b is a realizable entity &amp; b’s bearer is some material entity &amp; b is such that if it ceases to exist, then its bearer is physically changed, &amp; b’s realization occurs when and because this bearer is in some special physical circumstances, &amp; this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])</obo:IAO_0000600>
+        <obo:IAO_0000601 xml:lang="en">If b is a realizable entity then for all t at which b exists, b s-depends_on some material entity at t. (axiom label in BFO2 Reference: [063-002])</obo:IAO_0000601>
+        <obo:IAO_0000602>(forall (x t) (if (and (RealizableEntity x) (existsAt x t)) (exists (y) (and (MaterialEntity y) (specificallyDepends x y t))))) // axiom label in BFO2 CLIF: [063-002] </obo:IAO_0000602>
+        <obo:IAO_0000602>(forall (x) (if (Disposition x) (and (RealizableEntity x) (exists (y) (and (MaterialEntity y) (bearerOfAt x y t)))))) // axiom label in BFO2 CLIF: [062-002] </obo:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">disposition</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000600"/>
+        <owl:annotatedTarget xml:lang="en">b is a disposition means: b is a realizable entity &amp; b’s bearer is some material entity &amp; b is such that if it ceases to exist, then its bearer is physically changed, &amp; b’s realization occurs when and because this bearer is in some special physical circumstances, &amp; this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])</owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/062-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">If b is a realizable entity then for all t at which b exists, b s-depends_on some material entity at t. (axiom label in BFO2 Reference: [063-002])</owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/063-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x t) (if (and (RealizableEntity x) (existsAt x t)) (exists (y) (and (MaterialEntity y) (specificallyDepends x y t))))) // axiom label in BFO2 CLIF: [063-002] </owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/063-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (Disposition x) (and (RealizableEntity x) (exists (y) (and (MaterialEntity y) (bearerOfAt x y t)))))) // axiom label in BFO2 CLIF: [062-002] </owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/062-002"/>
     </owl:Axiom>
     
 
@@ -3653,6 +3779,36 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <obo:BFO_0000179>function</obo:BFO_0000179>
+        <obo:BFO_0000180>Function</obo:BFO_0000180>
+        <obo:IAO_0000112 xml:lang="en">the function of a hammer to drive in nails</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the function of a heart pacemaker to regulate the beating of a heart through electricity</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">the function of amylase in saliva to break down starch into sugar</obo:IAO_0000112>
+        <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: In the past, we have distinguished two varieties of function, artifactual function and biological function. These are not asserted subtypes of BFO:function however, since the same function – for example: to pump, to transport – can exist both in artifacts and in biological entities. The asserted subtypes of function that would be needed in order to yield a separate monoheirarchy are not artifactual function, biological function, etc., but rather transporting function, pumping function, etc.</obo:IAO_0000116>
+        <obo:IAO_0000600 xml:lang="en">A function is a disposition that exists in virtue of the bearer’s physical make-up and this physical make-up is something the bearer possesses because it came into being, either through evolution (in the case of natural biological entities) or through intentional design (in the case of artifacts), in order to realize processes of a certain sort. (axiom label in BFO2 Reference: [064-001])</obo:IAO_0000600>
+        <obo:IAO_0000602>(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] </obo:IAO_0000602>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">function</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000600"/>
+        <owl:annotatedTarget xml:lang="en">A function is a disposition that exists in virtue of the bearer’s physical make-up and this physical make-up is something the bearer possesses because it came into being, either through evolution (in the case of natural biological entities) or through intentional design (in the case of artifacts), in order to realize processes of a certain sort. (axiom label in BFO2 Reference: [064-001])</owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/064-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] </owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/064-001"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
@@ -3682,7 +3838,9 @@ For example, A and B may be gene products and binding of B by A positively regul
         <obo:IAO_0000602>(forall (x) (if (MaterialEntity x) (IndependentContinuant x))) // axiom label in BFO2 CLIF: [019-002] </obo:IAO_0000602>
         <obo:IAO_0000602>(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt x y t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [021-002] </obo:IAO_0000602>
         <obo:IAO_0000602>(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] </obo:IAO_0000602>
+        <oboInOwl:id>BFO:0000040</oboInOwl:id>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label>material entity</rdfs:label>
         <rdfs:label xml:lang="en">material entity</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3730,6 +3888,25 @@ For example, A and B may be gene products and binding of B by A positively regul
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <rdfs:label xml:lang="en">immaterial entity</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000182 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000182">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <obo:BFO_0000179>history</obo:BFO_0000179>
+        <obo:BFO_0000180>History</obo:BFO_0000180>
+        <obo:IAO_0000600 xml:lang="en">A history is a process that is the sum of the totality of processes taking place in the spatiotemporal region occupied by a material entity or site, including processes on the surface of the entity or within the cavities to which it serves as host. (axiom label in BFO2 Reference: [138-001])</obo:IAO_0000600>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">history</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000182"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000600"/>
+        <owl:annotatedTarget xml:lang="en">A history is a process that is the sum of the totality of processes taking place in the spatiotemporal region occupied by a material entity or site, including processes on the surface of the entity or within the cavities to which it serves as host. (axiom label in BFO2 Reference: [138-001])</owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/138-001"/>
+    </owl:Axiom>
     
 
 
@@ -4473,72 +4650,76 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CHMO_0000000 -->
+    <!-- http://purl.obolibrary.org/obo/CHMO_0000993 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0000000">
-        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000227"/>
-        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHMO_0000001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0000001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
-        <obo:IAO_0000115>The determination of the spectral absorbance of a solution. This method is often used to determine the concentration of a chemical in a solution.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>colorimetric method</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>colourimetry</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>CHMO:0000001</oboInOwl:id>
-        <rdfs:label>colorimetry</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0000993">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <obo:IAO_0000115>An independent material continuant that is self-connected and retains its identity over time.</obo:IAO_0000115>
+        <oboInOwl:id>CHMO:0000993</oboInOwl:id>
+        <rdfs:label>portion of material</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHMO_0000001"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHMO_0000993"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The determination of the spectral absorbance of a solution. This method is often used to determine the concentration of a chemical in a solution.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-0640-0422</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHMO_0000002 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0000002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHMO_0002739"/>
-        <obo:IAO_0000115>The determination of the mass of a gas or vapour adsorbed to a surface.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>gravimetric sorption</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>gravimetric sorption-desorption</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>gravimetric sorption-desorption analysis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>gravimetric sorption/desorption</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>gravimetric sorption/desorption analysis</oboInOwl:hasExactSynonym>
-        <oboInOwl:id>CHMO:0000002</oboInOwl:id>
-        <rdfs:label>gravimetric sorption analysis</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHMO_0000002"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The determination of the mass of a gas or vapour adsorbed to a surface.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-0640-0422</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHMO_0002739 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0002739">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000443"/>
-        <obo:IAO_0000115>A measurement method which obtains the concentration or quantity of a specified substance in an analyte.</obo:IAO_0000115>
-        <oboInOwl:created_by>batchelorc</oboInOwl:created_by>
-        <oboInOwl:creation_date>2012-04-13T11:50:09Z</oboInOwl:creation_date>
-        <oboInOwl:id>CHMO:0002739</oboInOwl:id>
-        <rdfs:label>quantitative determination method</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHMO_0002739"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A measurement method which obtains the concentration or quantity of a specified substance in an analyte.</owl:annotatedTarget>
+        <owl:annotatedTarget>An independent material continuant that is self-connected and retains its identity over time.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHMO_0002793 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0002793">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
+        <obo:IAO_0000115>A piece of apparatus that is used to measure a physical quantity.</obo:IAO_0000115>
+        <oboInOwl:id>CHMO:0002793</oboInOwl:id>
+        <rdfs:label>sensor</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHMO_0002793"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A piece of apparatus that is used to measure a physical quantity.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5985-7429</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHMO_0002796 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0002796">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHMO_0002797"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Measurement of the dose of a substance taken up by an object.</obo:IAO_0000115>
+        <oboInOwl:id>CHMO:0002796</oboInOwl:id>
+        <rdfs:label>dosimetry</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHMO_0002796"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Measurement of the dose of a substance taken up by an object.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1039/9781847559753-00013</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHMO_0002797 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHMO_0002797">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHMO_0002793"/>
+        <obo:IAO_0000115>A sensor that is used to measure the dose of a substance taken by up an object.</obo:IAO_0000115>
+        <oboInOwl:id>CHMO:0002797</oboInOwl:id>
+        <rdfs:label>dosimeter</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHMO_0002797"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sensor that is used to measure the dose of a substance taken by up an object.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1039/9781847559753-00013</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5473,7 +5654,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:hasDbXref rdf:resource="http://sweetontology.net/realmSoil/Permafrost"/>
         <oboInOwl:hasDbXref>EcoLexicon:permafrost</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>LTER:408</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Permafrost</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Permafrost</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Permafrost</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
         <rdfs:comment>Ice is not always present, as may be in the case of nonporous bedrock, but it frequently occurs and it may be in amounts exceeding the potential hydraulic saturation of the ground material.</rdfs:comment>
@@ -5484,7 +5665,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Soil or rock and included ice or organic material at or below the freezing point of water (0 degrees Celsius or 32 degrees Fahrenheit) for two or more years.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0003-4808-4736"/>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Permafrost</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Permafrost</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000134"/>
@@ -5581,7 +5762,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:hasDbXref>Geonames:T.TAL</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SWEETRealm:Talus</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>TGN:21508</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Scree</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Scree</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>TALUS</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>talus slope</oboInOwl:hasRelatedSynonym>
@@ -5592,7 +5773,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000194"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Broken rock that appears at the bottom of crags, mountain cliffs or valley shoulders.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Scree</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Scree</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000194"/>
@@ -5961,7 +6142,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A rock is a naturally occurring solid aggregate of one or more minerals or mineraloids.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Rock_(geology)</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Rock_(geology)</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6151,7 +6332,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <oboInOwl:hasDbXref>EcoLexicon:air</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>LTER:18</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SWEETRealm:Air</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Air</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Air</oboInOwl:hasDbXref>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/envo#EnvO-Lite-GSC"/>
         <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
         <rdfs:label>air</rdfs:label>
@@ -6160,7 +6341,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002005"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The mixture of gases (roughly (by molar content/volume: 78% nitrogen, 20.95% oxygen, 0.93% argon, 0.038% carbon dioxide, trace amounts of other gases, and a variable amount (average around 1%) of water vapor) that surrounds the planet Earth.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Air</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Air</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6213,7 +6394,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <oboInOwl:hasDbXref>LTER:492</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>LTER:493</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SWEETRealm:Sediment</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Sediment</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Sediment</oboInOwl:hasDbXref>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/envo#EnvO-Lite-GSC"/>
         <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
         <rdfs:comment>It is recommended to use a combination of sediment terms to describe a more specific sediment type.</rdfs:comment>
@@ -6223,7 +6404,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002007"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Sediment is an environmental substance comprised of any particulate matter that can be transported by fluid flow and which eventually is deposited as a layer of solid particles on the bedor bottom of a body of water or other liquid.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Sediment</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Sediment</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7188,7 +7369,7 @@ From https://en.wikipedia.org/wiki/ [A mineral] is different from a rock, which 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000256"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A mineral material is an environmental material which is primarily composed of some substance that is naturally occurring, solid and stable at room temperature, representable by a chemical formula, usually abiogenic, and that has an ordered atomic structure.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Mineral</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Mineral</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9743,6 +9924,24 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001023"/>
+        <obo:IAO_0000115>A radiation process during which energy is transmitted or emitted by means of fast-moving subatomic particles.</obo:IAO_0000115>
+        <oboInOwl:inSubset>environmental_hazards</oboInOwl:inSubset>
+        <oboInOwl:inSubset>envoAstro</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">particle radiation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001024"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A radiation process during which energy is transmitted or emitted by means of fast-moving subatomic particles.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Particle_radiation</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01001026 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001026">
@@ -11293,6 +11492,82 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>solar radiation</owl:annotatedTarget>
         <oboInOwl:hasDbXref>NCIT:C44445</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001217 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001217">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_21001217"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002608"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000801"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001219"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_21001217"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115>A stellar radiation process during which penetrating electromagnetic radiation is emitted by high-energy electrons as they fall into a lower state of energy.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>X-ray radiation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>X-ray stellar radiation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>x ray stellar radiation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>X-ray solar radiation</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>environmental_hazards</oboInOwl:inSubset>
+        <oboInOwl:inSubset>envoAstro</oboInOwl:inSubset>
+        <rdfs:comment>Ambiguity exists in the definition of x-rays and their differentiation from gamma rays. Photons with sufficient energy to be classified as x-rays may be emitted by other processes than electrons falling to lower energy states. Most x-rays have wavelengths ranging from 0.01 to 10 nanometers, corresponding to frequencies in the range of 30 petahertz to 30 exahertz and energies in the range of 100 eV to 100 keV.</rdfs:comment>
+        <rdfs:label xml:lang="en">X-ray stellar radiation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001217"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A stellar radiation process during which penetrating electromagnetic radiation is emitted by high-energy electrons as they fall into a lower state of energy.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/X-ray</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001217"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Ambiguity exists in the definition of x-rays and their differentiation from gamma rays. Photons with sufficient energy to be classified as x-rays may be emitted by other processes than electrons falling to lower energy states. Most x-rays have wavelengths ranging from 0.01 to 10 nanometers, corresponding to frequencies in the range of 30 petahertz to 30 exahertz and energies in the range of 100 eV to 100 keV.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/X-ray#Energy_ranges</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001219 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001219">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_21001219"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002608"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000801"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001211"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_21001219"/>
+        <obo:IAO_0000115>A stellar radiation process during which electromagnetic waves or their quanta are emitted from a star with sufficient energy to disrupt molecular bonds or alter the electron number of atoms.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>ionising stellar radiation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>ionising solar radiation</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>envoAstro</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">ionizing stellar radiation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001219"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A stellar radiation process during which electromagnetic waves or their quanta are emitted from a star with sufficient energy to disrupt molecular bonds or alter the electron number of atoms.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Electromagnetic_radiation</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Solar_irradiance</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14593,6 +14868,53 @@ Some definitions include additional discussion of the the physics involved which
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_21001217 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_21001217">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_21001219"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115>A radiation process during which penetrating electromagnetic radiation is emitted by high-energy electrons as they fall into a lower state of energy.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCIT:C17262</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>X ray radiation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>X-ray</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset>environmental_hazards</oboInOwl:inSubset>
+        <rdfs:label>X-ray radiation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_21001217"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A radiation process during which penetrating electromagnetic radiation is emitted by high-energy electrons as they fall into a lower state of energy.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/X-ray</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_21001217"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>X-ray</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NCIT:C17262</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_21001219 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_21001219">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001026"/>
+        <obo:IAO_0000115>A radiation process during which electromagnetic waves or their quanta are emitted with sufficient energy to disrupt molecular bonds or alter the electron number of atoms.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NCIT:C17052</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>ionising radiation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
+        <rdfs:label>ionizing radiation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_21001219"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A radiation process during which electromagnetic waves or their quanta are emitted with sufficient energy to disrupt molecular bonds or alter the electron number of atoms.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Electromagnetic_radiation</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_3100011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_3100011">
@@ -15135,6 +15457,29 @@ Question whether all plan specifications have objective specifications.
 
 Request that IAO either clarify these or change definitions not to use them</rdfs:comment>
         <rdfs:label xml:lang="en">plan specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000109">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0001938"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000111 xml:lang="en">measurement datum</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">Examples of measurement data are the recoding of the weight of a mouse as {40,mass,&quot;grams&quot;}, the recording of an observation of the behavior of the mouse {,process,&quot;agitated&quot;}, the recording of the expression level of a gene as measured through the process of microarray experiment {3.4,luminosity,}.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">A measurement datum is an information content entity that is a recording of the output of a measurement such as produced by a device.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">2/2/2009 is_specified_output of some assay?</obo:IAO_0000116>
+        <obo:IAO_0000117 xml:lang="en">person:Chris Stoeckert</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">OBI_0000305</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">measurement datum</rdfs:label>
     </owl:Class>
     
 
@@ -16157,24 +16502,31 @@ for now.</obo:IAO_0000116>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBI_0000443 -->
+    <!-- http://purl.obolibrary.org/obo/OBI_0000338 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000443">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
-        <obo:IAO_0000115>An assay with the objective to capture information about the presence, concentration or amount of an analyte in the evaluant.</obo:IAO_0000115>
-        <oboInOwl:id>OBI:0000443</oboInOwl:id>
-        <rdfs:label>analyte assay</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000338">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001909"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000111>interpreting data</obo:IAO_0000111>
+        <obo:IAO_0000112>Concluding that a gene is upregulated in a tissue sample based on the band intensity in a western blot.  Concluding that a patient has a infection based on measurement of an elevated body temperature and reported headache. Concluding that there were problems in an investigation because data from PCR and microarray are conflicting. Concluding that &apos;defects in gene XYZ cause cancer due to improper DNA repair&apos; based on data from experiments in that study that gene XYZ is involved in DNA repair, and the conclusion of a previous study that cancer patients have an increased number of mutations in this gene. </obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A planned process in which data gathered in an investigation is evaluated in the context of existing knowledge with the objective to generate more general conclusions or to conclude that the data does not allow one to draw general conclusion</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON: Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000117>PERSON: Jennifer Fostel</obo:IAO_0000117>
+        <obo:IAO_0000119>Bjoern Peters</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">drawing a conclusion based on data</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/OBI_0000443"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An assay with the objective to capture information about the presence, concentration or amount of an analyte in the evaluant.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>obi:ar</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>obi:bp</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>obi:hp</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>obi:ppb</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obi:prs</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -16716,6 +17068,62 @@ A blood specimen that has been centrifuged to obtain the white blood cells.</obo
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0000968 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000968">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHMO_0000993"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000047"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000111>device</obo:IAO_0000111>
+        <obo:IAO_0000112>A voltmeter is a measurement device which is intended to perform some measure function.</obo:IAO_0000112>
+        <obo:IAO_0000112>An autoclave is a device that sterlizes instruments or contaminated waste by applying high temperature and pressure.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115>A material entity that is designed to perform a function in a scientific investigation, but is not a reagent.</obo:IAO_0000115>
+        <obo:IAO_0000116>2012-12-17 JAO: In common lab usage, there is a distinction made between devices and reagents that is difficult to model. Therefore we have chosen to specifically exclude reagents from the definition of &quot;device&quot;, and are enumerating the types of roles that a reagent can perform.
+
+2013-6-5 MHB: The following clarifications are outcomes of the May 2013 Philly Workshop. Reagents are distinguished from devices that also participate in scientific techniques by the fact that reagents are chemical or biological in nature and necessarily participate in some chemical interaction or reaction during the realization of their experimental role. By contrast, devices do not participate in such chemical reactions/interactions.  Note that there are cases where devices use reagent components during their operation, where the reagent-device distinction is less clear.  For example:
+
+(1) An HPLC machine is considered a device, but has a column that holds a stationary phase resin as an operational component.  This resin qualifies as a device if it participates purely in size exclusion, but bears a reagent role that is realized in the running of a column if it interacts electrostatically or chemically with the evaluant. The container the resin is in (“the column”) considered alone is a device. So the entire column as well as the entire HPLC machine are devices that have a reagent as an operating part.
+
+(2) A pH meter is a device, but its electrode component bears a reagent role in virtue of its interacting directly with the evaluant in execution of an assay.
+
+(3) A gel running  box  is a device that has a metallic lead as a component that participates in a chemical reaction with the running buffer when a charge is passed through it.  This metallic lead is considered to have a reagent role as a component of this device realized in the running of a gel.
+
+In the examples above, a reagent is an operational component of a device, but the device itself does not realize a reagent role (as bearing a reagent role is not transitive across the part_of relation).  In this way, the asserted disjointness between a reagent and device holds, as both roles are never realized in the same bearer during execution of an assay.  </obo:IAO_0000116>
+        <obo:IAO_0000117>PERSON: Helen Parkinson</obo:IAO_0000117>
+        <obo:IAO_0000118>instrument</obo:IAO_0000118>
+        <obo:IAO_0000119>OBI development call 2012-12-17.</obo:IAO_0000119>
+        <oboInOwl:hasAlternativeId>CHMO:0000998</oboInOwl:hasAlternativeId>
+        <oboInOwl:id>OBI:0000968</oboInOwl:id>
+        <rdfs:label>device</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A material entity that is designed to perform a function in a scientific investigation, but is not a reagent.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>obi:obi</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000984 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000984">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <obo:IAO_0000111>dose</obo:IAO_0000111>
+        <obo:IAO_0000112>An organism has been injected 1ml of vaccine</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115>A measurement datum that measures the quantity of something that may be administered to an organism or that an organism may be exposed to. Quantities of nutrients, drugs, vaccines and toxins are referred to as doses.</obo:IAO_0000115>
+        <rdfs:label>dose</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0001000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001000">
@@ -16729,6 +17137,35 @@ JZ: based on textual definition of edited document, it can be defined as N&amp;S
         <obo:IAO_0000117 xml:lang="en">PERSON: Jessica Turner</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">Merriam-Webster</obo:IAO_0000119>
         <rdfs:label>questionnaire</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001909 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001909">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000124"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000338"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000111>conclusion based on data</obo:IAO_0000111>
+        <obo:IAO_0000112>The conclusion that a gene is upregulated in a tissue sample based on the band intensity in a western blot. The conclusion that a patient has a infection based on measurement of an elevated body temperature and reported headache. The conclusion that there were problems in an investigation because data from PCR and microarray are conflicting.
+The following are NOT conclusions based on data: data themselves; results from pure mathematics, e.g. &quot;13 is prime&quot;.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115>An information content entity that is inferred from data.</obo:IAO_0000115>
+        <obo:IAO_0000116>In the Philly 2013 workshop, we recognized the limitations of &quot;conclusion textual entity&quot;, and we introduced this as more general. The need for the &apos;textual entity&apos; term going forward is up for future debate. </obo:IAO_0000116>
+        <obo:IAO_0000117>Group:2013 Philly Workshop group</obo:IAO_0000117>
+        <obo:IAO_0000119>Group:2013 Philly Workshop group</obo:IAO_0000119>
+        <rdfs:label>conclusion based on data</rdfs:label>
     </owl:Class>
     
 
@@ -17917,9 +18354,20 @@ class labels for these objects. The resulting predictor can be used to attach cl
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001018">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
         <obo:IAO_0000115>A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>PATO:0002079</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>Wikipedia:Physical_property</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>relational physical quality</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0001018</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
         <rdfs:label>physical quality</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001018"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -17941,6 +18389,9 @@ class labels for these objects. The resulting predictor can be used to attach cl
         <obo:IAO_0000111>physical object quality</obo:IAO_0000111>
         <obo:IAO_0000115>A quality which inheres in a continuant.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/pato.owl"/>
+        <oboInOwl:hasAlternativeId>PATO:0001237</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>PATO:0001238</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>snap:Quality</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>monadic quality of a continuant</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>multiply inhering quality of a physical entity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>quality of a continuant</oboInOwl:hasExactSynonym>
@@ -17949,8 +18400,17 @@ class labels for these objects. The resulting predictor can be used to attach cl
         <oboInOwl:hasExactSynonym>quality of continuant</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>monadic quality of an object</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>monadic quality of continuant</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0001241</oboInOwl:id>
+        <rdfs:comment>Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.</rdfs:comment>
         <rdfs:label>physical object quality</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A quality which inheres in a continuant.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -18174,8 +18634,37 @@ class labels for these objects. The resulting predictor can be used to attach cl
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A quality that inheres in an bearer by virtue of how that bearer interacts with radiation.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0001739</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
         <rdfs:label>radiation quality</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001739"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A quality that inheres in an bearer by virtue of how that bearer interacts with radiation.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001744 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001744">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001739"/>
+        <obo:IAO_0000115>A radiation quality inhering in a bearer by virtue of what the bearer receives as a result of being exposed to ionizing radiation.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0001744</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#scalar_slim"/>
+        <rdfs:label>radiation exposure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001744"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A radiation quality inhering in a bearer by virtue of what the bearer receives as a result of being exposed to ionizing radiation.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>hps:hps</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -32201,8 +32690,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <obo:IAO_0000115>A mass unit which is equal to the mass of the International Prototype Kilogram kept by the BIPM at Svres, France.</obo:IAO_0000115>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000010">
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <obo:IAO_0000118>s</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <oboInOwl1:hasExactSynonym>s</oboInOwl1:hasExactSynonym>
         <rdfs:label>second</rdfs:label>
         <obo:IAO_0000118>sec</obo:IAO_0000118>
@@ -32234,8 +32723,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <obo:IAO_0000118>cm</obo:IAO_0000118>
         <rdfs:label>centimeter</rdfs:label>
         <oboInOwl1:hasExactSynonym>centimetre</oboInOwl1:hasExactSynonym>
-        <obo:IAO_0000111>centimeter</obo:IAO_0000111>
         <oboInOwl1:hasExactSynonym>cm</oboInOwl1:hasExactSynonym>
+        <obo:IAO_0000111>centimeter</obo:IAO_0000111>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <rdfs:comment>&quot;A length unit which is equal to one hundredth of a meter or 10^[-2] m.&quot; [NIST:NIST]</rdfs:comment>
         <obo:IAO_0000115>A length unit which is equal to one hundredth of a meter or 10^[-2] m.</obo:IAO_0000115>
@@ -32263,13 +32752,13 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000018">
         <obo:IAO_0000118>nm</obo:IAO_0000118>
-        <oboInOwl1:hasExactSynonym>nm</oboInOwl1:hasExactSynonym>
         <obo:IAO_0000111>nanometer</obo:IAO_0000111>
+        <oboInOwl1:hasExactSynonym>nm</oboInOwl1:hasExactSynonym>
         <obo:IAO_0000115>A length unit which is equal to one thousandth of one millionth of a meter or 10^[-9] m.</obo:IAO_0000115>
         <oboInOwl1:hasExactSynonym>nanometre</oboInOwl1:hasExactSynonym>
         <rdfs:label>nanometer</rdfs:label>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <rdfs:comment>&quot;A length unit which is equal to one thousandth of one millionth of a meter or 10^[-9] m.&quot; [NIST:NIST]</rdfs:comment>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000019">
         <oboInOwl1:hasExactSynonym>Å</oboInOwl1:hasExactSynonym>
@@ -32299,8 +32788,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:label>milligram</rdfs:label>
         <obo:IAO_0000115>A mass unit which is equal to one thousandth of a gram or 10^[-3] g.</obo:IAO_0000115>
         <oboInOwl1:hasExactSynonym>mg</oboInOwl1:hasExactSynonym>
-        <obo:IAO_0000118>mg</obo:IAO_0000118>
         <rdfs:comment>&quot;A mass unit which is equal to one thousandth of a gram or 10^[-3] g.&quot; [UOC:GVG]</rdfs:comment>
+        <obo:IAO_0000118>mg</obo:IAO_0000118>
         <obo:IAO_0000111>milligram</obo:IAO_0000111>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000023">
@@ -32317,8 +32806,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <obo:IAO_0000111>nanogram</obo:IAO_0000111>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <oboInOwl1:hasExactSynonym>ng</oboInOwl1:hasExactSynonym>
-        <rdfs:label>nanogram</rdfs:label>
         <rdfs:comment>&quot;A mass unit which is equal to one thousandth of one millionth of a gram or 10^[-9] g.&quot; [UOC:GVG]</rdfs:comment>
+        <rdfs:label>nanogram</rdfs:label>
         <obo:IAO_0000118>ng</obo:IAO_0000118>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000025">
@@ -32340,15 +32829,15 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:comment>&quot;A temperature unit which is equal to one kelvin degree. However, they have their zeros at different points. The centigrade scale has its zero at 273.15 K.&quot; [NIST:NIST]</rdfs:comment>
         <obo:IAO_0000118>degree C</obo:IAO_0000118>
         <obo:IAO_0000115>A temperature unit which is equal to one kelvin degree. However, they have their zeros at different points. The centigrade scale has its zero at 273.15 K.</obo:IAO_0000115>
-        <oboInOwl1:hasExactSynonym>C</oboInOwl1:hasExactSynonym>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
+        <oboInOwl1:hasExactSynonym>C</oboInOwl1:hasExactSynonym>
         <obo:IAO_0000118>C</obo:IAO_0000118>
         <obo:IAO_0000111>degree Celsius</obo:IAO_0000111>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000028">
         <rdfs:comment>&quot;A time unit which is equal to one thousandth of a second or 10^[-3] s.&quot; [NIST:NIST]</rdfs:comment>
-        <oboInOwl1:hasExactSynonym>ms</oboInOwl1:hasExactSynonym>
         <rdfs:label>millisecond</rdfs:label>
+        <oboInOwl1:hasExactSynonym>ms</oboInOwl1:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000029">
         <oboInOwl1:hasExactSynonym>us</oboInOwl1:hasExactSynonym>
@@ -32370,8 +32859,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:comment>&quot;A time unit which is equal to 60 seconds.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000032">
-        <obo:IAO_0000111>hour</obo:IAO_0000111>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
+        <obo:IAO_0000111>hour</obo:IAO_0000111>
         <rdfs:label>hour</rdfs:label>
         <obo:IAO_0000118>h</obo:IAO_0000118>
         <oboInOwl1:hasExactSynonym>h</oboInOwl1:hasExactSynonym>
@@ -32380,8 +32869,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:comment>&quot;A time unit which is equal to 3600 seconds or 60 minutes.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000033">
-        <obo:IAO_0000111>day</obo:IAO_0000111>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
+        <obo:IAO_0000111>day</obo:IAO_0000111>
         <rdfs:comment>&quot;A time unit which is equal to 24 hours.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
         <obo:IAO_0000115>A time unit which is equal to 24 hours.</obo:IAO_0000115>
         <rdfs:label>day</rdfs:label>
@@ -32402,8 +32891,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000036">
         <obo:IAO_0000111>year</obo:IAO_0000111>
-        <obo:IAO_0000115>A time unit which is equal to 12 months which is science is taken to be equal to 365.25 days.</obo:IAO_0000115>
         <rdfs:comment>&quot;A time unit which is equal to 12 months which in science is taken to be equal to 365.25 days.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
+        <obo:IAO_0000115>A time unit which is equal to 12 months which is science is taken to be equal to 365.25 days.</obo:IAO_0000115>
         <rdfs:label>year</rdfs:label>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
     </rdf:Description>
@@ -32427,8 +32916,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <obo:IAO_0000118>umol</obo:IAO_0000118>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000040">
-        <rdfs:comment>&quot;A substance unit equal to a thousandth of a mol or 10^[-3] mol.&quot; [NIST:NIST]</rdfs:comment>
         <rdfs:label>millimole</rdfs:label>
+        <rdfs:comment>&quot;A substance unit equal to a thousandth of a mol or 10^[-3] mol.&quot; [NIST:NIST]</rdfs:comment>
         <oboInOwl1:hasExactSynonym>mmol</oboInOwl1:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000041">
@@ -32463,25 +32952,25 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <obo:IAO_0000118>M</obo:IAO_0000118>
         <rdfs:comment>&quot;A unit of concentration which expresses a concentration of 1 mole of solute per liter of solution (mol/L).&quot; [UOC:GVG]</rdfs:comment>
         <obo:IAO_0000115>A unit of concentration which expresses a concentration of 1 mole of solute per liter of solution (mol/L).</obo:IAO_0000115>
+        <obo:IAO_0000111>molar</obo:IAO_0000111>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <oboInOwl1:hasExactSynonym>M</oboInOwl1:hasExactSynonym>
-        <obo:IAO_0000111>molar</obo:IAO_0000111>
         <rdfs:label>molar</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000063">
         <obo:IAO_0000115>A unit of molarity which is equal to one thousandth of a molar or 10^[-3] M.</obo:IAO_0000115>
         <obo:IAO_0000118>mM</obo:IAO_0000118>
         <rdfs:label>millimolar</rdfs:label>
-        <obo:IAO_0000111>millimolar</obo:IAO_0000111>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <oboInOwl1:hasExactSynonym>mM</oboInOwl1:hasExactSynonym>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
+        <obo:IAO_0000111>millimolar</obo:IAO_0000111>
         <rdfs:comment>&quot;A unit of molarity which is equal to one thousandth of a molar or 10^[-3] M.&quot; [UOC:GVG]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000064">
         <rdfs:label>micromolar</rdfs:label>
         <obo:IAO_0000118>uM</obo:IAO_0000118>
-        <obo:IAO_0000115>A unit of molarity which is equal to one millionth of a molar or 10^[-6] M.</obo:IAO_0000115>
         <oboInOwl1:hasExactSynonym>uM</oboInOwl1:hasExactSynonym>
+        <obo:IAO_0000115>A unit of molarity which is equal to one millionth of a molar or 10^[-6] M.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <obo:IAO_0000111>micromolar</obo:IAO_0000111>
         <rdfs:comment>&quot;A unit of molarity which is equal to one millionth of a molar or 10^[-6] M.&quot; [UOC:GVG]</rdfs:comment>
@@ -32501,13 +32990,13 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:comment>&quot;A unit of molarity which is equal to 10^[-12] M.&quot; [UOC:GVG]</rdfs:comment>
         <rdfs:label>picomolar</rdfs:label>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
-        <oboInOwl1:hasExactSynonym>pM</oboInOwl1:hasExactSynonym>
         <obo:IAO_0000115>A unit of molarity which is equal to 10^[-12] M.</obo:IAO_0000115>
+        <oboInOwl1:hasExactSynonym>pM</oboInOwl1:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000068">
         <rdfs:label>molal</rdfs:label>
-        <rdfs:comment>&quot;A unit of concentration which expresses a concentration of a solution of 1 mole per kilogram of solvent (mol/kg).&quot; [UOC:GVG]</rdfs:comment>
         <oboInOwl1:hasExactSynonym>m</oboInOwl1:hasExactSynonym>
+        <rdfs:comment>&quot;A unit of concentration which expresses a concentration of a solution of 1 mole per kilogram of solvent (mol/kg).&quot; [UOC:GVG]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000069">
         <oboInOwl1:hasExactSynonym>mm</oboInOwl1:hasExactSynonym>
@@ -32554,8 +33043,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000078">
         <rdfs:comment>&quot;An angular unit acceleration which is equal to the angular acceleration of an object changing its angular velocity by 1rad/s over a time period that equals one second.&quot; [NIST:NIST]</rdfs:comment>
         <oboInOwl1:hasExactSynonym>alpha</oboInOwl1:hasExactSynonym>
-        <rdfs:label>radian per second per second</rdfs:label>
         <oboInOwl1:hasExactSynonym>rad/s^[2]</oboInOwl1:hasExactSynonym>
+        <rdfs:label>radian per second per second</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000079">
         <oboInOwl1:hasExactSynonym>rad/s</oboInOwl1:hasExactSynonym>
@@ -32575,21 +33064,21 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:label>square centimeter</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000082">
-        <rdfs:label>square millimeter</rdfs:label>
         <rdfs:comment>&quot;An area unit which is equal to one millionth of a square meter or 10^[-6] m^[2].&quot; [NIST:NIST]</rdfs:comment>
+        <rdfs:label>square millimeter</rdfs:label>
         <oboInOwl1:hasExactSynonym>square millimetre</oboInOwl1:hasExactSynonym>
         <oboInOwl1:hasExactSynonym>mm^[2]</oboInOwl1:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000083">
         <oboInOwl1:hasExactSynonym>kg/m^[3]</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;A mass unit density which is equal to mass of an object in kilograms divided by the volume in cubic meters.&quot; [UOC:GVG]</rdfs:comment>
-        <rdfs:label>kilogram per cubic meter</rdfs:label>
         <oboInOwl1:hasExactSynonym>kilogram per cubic metre</oboInOwl1:hasExactSynonym>
+        <rdfs:label>kilogram per cubic meter</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000084">
         <rdfs:label>gram per cubic centimeter</rdfs:label>
-        <oboInOwl1:hasExactSynonym>gram per cubic centimetre</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;A mass unit density which is equal to mass of an object in grams divided by the volume in cubic centimeters.&quot; [UOC:GVG]</rdfs:comment>
+        <oboInOwl1:hasExactSynonym>gram per cubic centimetre</oboInOwl1:hasExactSynonym>
         <oboInOwl1:hasExactSynonym>g/cm^[3]</oboInOwl1:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000085">
@@ -32600,8 +33089,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000086">
         <rdfs:comment>&quot;An area density unit which is equal to the mass of an object in kilograms divided by the surface area in meters squared.&quot; [NIST:NIST]</rdfs:comment>
-        <oboInOwl1:hasExactSynonym>kilogram per square metre</oboInOwl1:hasExactSynonym>
         <oboInOwl1:hasExactSynonym>Body Mass Index (BMI)</oboInOwl1:hasExactSynonym>
+        <oboInOwl1:hasExactSynonym>kilogram per square metre</oboInOwl1:hasExactSynonym>
         <rdfs:label>kilogram per square meter</rdfs:label>
         <oboInOwl1:hasExactSynonym>kg/m^[2]</oboInOwl1:hasExactSynonym>
     </rdf:Description>
@@ -32628,8 +33117,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:comment>&quot;A molar volume unit which is equal to 1 cubic centimeter occupied by one mole of a substance in the form of a solid, liquid, or gas.&quot; [NIST:NIST]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000091">
-        <rdfs:comment>&quot;A momentum unit which is equal to the momentum of a one kilogram mass object with a speed of one meter per second.&quot; [NIST:NIST]</rdfs:comment>
         <oboInOwl1:hasExactSynonym>kg.m/s</oboInOwl1:hasExactSynonym>
+        <rdfs:comment>&quot;A momentum unit which is equal to the momentum of a one kilogram mass object with a speed of one meter per second.&quot; [NIST:NIST]</rdfs:comment>
         <oboInOwl1:hasExactSynonym>kilogram metre per second</oboInOwl1:hasExactSynonym>
         <rdfs:label>kilogram meter per second</rdfs:label>
     </rdf:Description>
@@ -32654,8 +33143,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000096">
         <rdfs:label>cubic meter</rdfs:label>
         <oboInOwl1:hasExactSynonym>m^[3]</oboInOwl1:hasExactSynonym>
-        <oboInOwl1:hasExactSynonym>cubic metre</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;A volume unit which is equal to the volume of a cube with edges one meter in length. One cubic meter equals to 1000 liters.&quot; [NIST:NIST]</rdfs:comment>
+        <oboInOwl1:hasExactSynonym>cubic metre</oboInOwl1:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000097">
         <obo:IAO_0000111>cubic centimeter</obo:IAO_0000111>
@@ -32669,19 +33158,19 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <obo:IAO_0000118>cc</obo:IAO_0000118>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000098">
-        <rdfs:comment>&quot;A volume unit which is equal to one thousandth of a liter or 10^[-3] L, or to 1 cubic centimeter.&quot; [NIST:NIST]</rdfs:comment>
         <rdfs:label>milliliter</rdfs:label>
+        <rdfs:comment>&quot;A volume unit which is equal to one thousandth of a liter or 10^[-3] L, or to 1 cubic centimeter.&quot; [NIST:NIST]</rdfs:comment>
         <oboInOwl1:hasExactSynonym>ml</oboInOwl1:hasExactSynonym>
-        <oboInOwl1:hasExactSynonym>millilitre</oboInOwl1:hasExactSynonym>
         <obo:IAO_0000115>A volume unit which is equal to one thousandth of a liter or 10^[-3] L, or to 1 cubic centimeter.</obo:IAO_0000115>
+        <oboInOwl1:hasExactSynonym>millilitre</oboInOwl1:hasExactSynonym>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <obo:IAO_0000118>ml</obo:IAO_0000118>
         <obo:IAO_0000111>milliliter</obo:IAO_0000111>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000099">
         <oboInOwl1:hasExactSynonym>litre</oboInOwl1:hasExactSynonym>
-        <oboInOwl1:hasExactSynonym>L</oboInOwl1:hasExactSynonym>
         <oboInOwl1:hasExactSynonym>l</oboInOwl1:hasExactSynonym>
+        <oboInOwl1:hasExactSynonym>L</oboInOwl1:hasExactSynonym>
         <obo:IAO_0000115>A volume unit which is equal to one thousandth of a cubic meter or 10^[-3] m^[3], or to 1 decimeter.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <rdfs:comment>&quot;A volume unit which is equal to one thousandth of a cubic meter or 10^[-3] m^[3], or to 1 decimeter.&quot; [NIST:NIST]</rdfs:comment>
@@ -32695,25 +33184,25 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:label>cubic decimeter</rdfs:label>
         <oboInOwl1:hasExactSynonym>cubic decimetre</oboInOwl1:hasExactSynonym>
         <obo:IAO_0000115>A volume unit which is equal to one thousand of a cubic meter or 10^[-3] m^[3], or to 1 L.</obo:IAO_0000115>
-        <obo:IAO_0000111>cubic decimeter</obo:IAO_0000111>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
+        <obo:IAO_0000111>cubic decimeter</obo:IAO_0000111>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000101">
         <obo:IAO_0000111>microliter</obo:IAO_0000111>
         <rdfs:label>microliter</rdfs:label>
         <obo:IAO_0000118>ul</obo:IAO_0000118>
-        <obo:IAO_0000115>A volume unit which is equal to one millionth of a liter or 10^[-6] L.</obo:IAO_0000115>
         <oboInOwl1:hasExactSynonym>microlitre</oboInOwl1:hasExactSynonym>
+        <obo:IAO_0000115>A volume unit which is equal to one millionth of a liter or 10^[-6] L.</obo:IAO_0000115>
         <oboInOwl1:hasExactSynonym>ul</oboInOwl1:hasExactSynonym>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <rdfs:comment>&quot;A volume unit which is equal to one millionth of a liter or 10^[-6] L.&quot; [NIST:NIST]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000102">
-        <obo:IAO_0000115>A volume unit which is equal to one thousandth of one millionth of a liter or 10^[-9] L.</obo:IAO_0000115>
         <oboInOwl1:hasExactSynonym>nl</oboInOwl1:hasExactSynonym>
+        <obo:IAO_0000115>A volume unit which is equal to one thousandth of one millionth of a liter or 10^[-9] L.</obo:IAO_0000115>
         <rdfs:label>nanoliter</rdfs:label>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <rdfs:comment>&quot;A volume unit which is equal to one thousandth of one millionth of a liter or 10^[-9] L.&quot; [NIST:NIST]</rdfs:comment>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <obo:IAO_0000111>nanoliter</obo:IAO_0000111>
         <oboInOwl1:hasExactSynonym>nanolitre</oboInOwl1:hasExactSynonym>
         <obo:IAO_0000118>nl</obo:IAO_0000118>
@@ -32724,8 +33213,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <obo:IAO_0000111>picoliter</obo:IAO_0000111>
         <obo:IAO_0000115>A volume unit which is equal to 10^[-12] L.</obo:IAO_0000115>
         <oboInOwl1:hasExactSynonym>pl</oboInOwl1:hasExactSynonym>
-        <obo:IAO_0000118>pl</obo:IAO_0000118>
         <oboInOwl1:hasExactSynonym>picolitre</oboInOwl1:hasExactSynonym>
+        <obo:IAO_0000118>pl</obo:IAO_0000118>
         <rdfs:comment>&quot;A volume unit which is equal to 10^[-12] L.&quot; [NIST:NIST]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000104">
@@ -32749,8 +33238,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:label>newton</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000110">
-        <oboInOwl1:hasExactSynonym>Pa</oboInOwl1:hasExactSynonym>
         <rdfs:label>pascal</rdfs:label>
+        <oboInOwl1:hasExactSynonym>Pa</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;A pressure unit which is equal to the pressure or stress on a surface caused by a force of 1 newton spread over a surface of 1 m^[2].&quot; [NIST:NIST]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000112">
@@ -32775,8 +33264,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000120">
         <rdfs:label>katal</rdfs:label>
-        <oboInOwl1:hasExactSynonym>kat</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;A catalytic unit activity which is equal to the activity of a catalyst in moles per second, such as the amount of an enzyme needed to transform one mole of substrate per second.&quot; [NIST:NIST]</rdfs:comment>
+        <oboInOwl1:hasExactSynonym>kat</oboInOwl1:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000123">
         <rdfs:comment>&quot;A plane angle unit which is equal to the angle subtended at the center of a circle by an arc equal in length to the radius of the circle, approximately 57 degrees 17 minutes and 44.6 seconds.&quot; [NIST:NIST]</rdfs:comment>
@@ -32799,8 +33288,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <oboInOwl1:hasExactSynonym>Ci</oboInOwl1:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000134">
-        <oboInOwl1:hasExactSynonym>Gy</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;An absorbed dose unit which is equal to the absorption of one joule of radiation energy by one kilogram of matter.&quot; [NIST:NIST]</rdfs:comment>
+        <oboInOwl1:hasExactSynonym>Gy</oboInOwl1:hasExactSynonym>
         <rdfs:label>gray</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000135">
@@ -32849,13 +33338,13 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000144">
         <oboInOwl1:hasExactSynonym>nSv</oboInOwl1:hasExactSynonym>
-        <rdfs:label>nanosievert</rdfs:label>
         <rdfs:comment>&quot;A dose equivalent unit which is equal to one thousandth of a millionth of a sievert or 10^[-9] Sv.&quot; [NIST:NIST]</rdfs:comment>
+        <rdfs:label>nanosievert</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000145">
         <rdfs:comment>&quot;An activity (of a radionuclide) unit which is equal to one thousandth of a curie or 10^[-3] Ci.&quot; [ORCBS:ORCBS]</rdfs:comment>
-        <rdfs:label>millicurie</rdfs:label>
         <oboInOwl1:hasExactSynonym>mCi</oboInOwl1:hasExactSynonym>
+        <rdfs:label>millicurie</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000146">
         <rdfs:label>microcurie</rdfs:label>
@@ -32864,8 +33353,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000147">
         <rdfs:label>disintegrations per minute</rdfs:label>
-        <oboInOwl1:hasExactSynonym>dpm</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;An activity (of a radionuclide) unit which is equal to the activity of a quantity of radioactive material in which one nucleus decays per minute or there is one atom disintegration per minute.&quot; [ORCBS:ORCBS]</rdfs:comment>
+        <oboInOwl1:hasExactSynonym>dpm</oboInOwl1:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000148">
         <rdfs:comment>&quot;An activity (of a radionuclide) unit which is equal to the number of light emissions produced by ionizing radiation in one minute.&quot; [ORCBS:ORCBS]</rdfs:comment>
@@ -32911,8 +33400,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000160">
         <oboInOwl1:hasExactSynonym>microeinstein per square metre per second</oboInOwl1:hasExactSynonym>
-        <oboInOwl1:hasExactSynonym>umicroeinstein/sm^[2]</oboInOwl1:hasExactSynonym>
         <rdfs:label>microeinstein per square meter per second</rdfs:label>
+        <oboInOwl1:hasExactSynonym>umicroeinstein/sm^[2]</oboInOwl1:hasExactSynonym>
         <oboInOwl1:hasExactSynonym>micromole per second and square meter mmol/sm^2</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;An irradiance unit which is equal to one microeinstein per square meter per second or 10^[-6] microeinstein/sm^[2].&quot; [Wikipedia:Wikipedia]</rdfs:comment>
     </rdf:Description>
@@ -32934,18 +33423,18 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000164">
         <obo:IAO_0000111>mass volume percentage</obo:IAO_0000111>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <obo:IAO_0000118>% w/v</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <obo:IAO_0000115>A dimensionless concentration unit which denotes the mass of the substance in a mixture as a percentage of the volume of the entire mixture.</obo:IAO_0000115>
         <rdfs:label>mass volume percentage</rdfs:label>
         <oboInOwl1:hasExactSynonym>weight-volume percentage</oboInOwl1:hasExactSynonym>
         <obo:IAO_0000118>percent vol per vol</obo:IAO_0000118>
-        <oboInOwl1:hasExactSynonym>(w/v)</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;A dimensionless concentration unit which denotes the mass of the substance in a mixture as a percentage of the volume of the entire mixture.&quot; [UOC:GVG]</rdfs:comment>
+        <oboInOwl1:hasExactSynonym>(w/v)</oboInOwl1:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000165">
-        <rdfs:label>volume percentage</rdfs:label>
         <obo:IAO_0000118>% v/v</obo:IAO_0000118>
+        <rdfs:label>volume percentage</rdfs:label>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <rdfs:comment>&quot;A dimensionless concentration unit which denotes the volume of the solute in mL per 100 mL of the resulting solution.&quot; [UOC:GVG]</rdfs:comment>
         <oboInOwl1:hasExactSynonym>% (v/v)</oboInOwl1:hasExactSynonym>
@@ -32955,14 +33444,14 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000167">
         <oboInOwl1:hasExactSynonym>pph</oboInOwl1:hasExactSynonym>
-        <rdfs:label>parts per hundred</rdfs:label>
         <rdfs:comment>&quot;A dimensionless concentration notation which denotes the amount of a given substance in a total amount of 100 regardless of the units of measure as long as they are the same.&quot; [UOC:GVG]</rdfs:comment>
+        <rdfs:label>parts per hundred</rdfs:label>
         <oboInOwl1:hasExactSynonym>10^[-2]</oboInOwl1:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000168">
         <oboInOwl1:hasExactSynonym>ppth</oboInOwl1:hasExactSynonym>
-        <rdfs:label>parts per thousand</rdfs:label>
         <oboInOwl1:hasExactSynonym>10^[-3]</oboInOwl1:hasExactSynonym>
+        <rdfs:label>parts per thousand</rdfs:label>
         <rdfs:comment>&quot;A dimensionless concentration notation which denotes the amount of a given substance in a total amount of 1000 regardless of the units of measure as long as they are the same.&quot; [UOC:GVG]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000169">
@@ -32991,8 +33480,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000173">
         <oboInOwl1:hasExactSynonym>gram per millilitre</oboInOwl1:hasExactSynonym>
-        <rdfs:label>gram per milliliter</rdfs:label>
         <rdfs:comment>&quot;A mass unit density which is equal to mass of an object in grams divided by the volume in milliliter.&quot; [UOC:GVG]</rdfs:comment>
+        <rdfs:label>gram per milliliter</rdfs:label>
         <oboInOwl1:hasExactSynonym>g/ml</oboInOwl1:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000174">
@@ -33046,8 +33535,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000184">
         <oboInOwl1:hasExactSynonym>kg/m</oboInOwl1:hasExactSynonym>
-        <oboInOwl1:hasExactSynonym>kilogram per metre</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;An area density unit which is equal to the mass of an object in kilograms divided by one meter.&quot; [NIST:NIST]</rdfs:comment>
+        <oboInOwl1:hasExactSynonym>kilogram per metre</oboInOwl1:hasExactSynonym>
         <rdfs:label>kilogram per meter</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000185">
@@ -33067,8 +33556,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:label>purity percentage</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000194">
-        <rdfs:comment>&quot;A dimensionless percent unit which denotes the density of an attached or monolayer culture (e.g., cell culture).&quot; [MGED:MGED]</rdfs:comment>
         <rdfs:label>confluence percentage</rdfs:label>
+        <rdfs:comment>&quot;A dimensionless percent unit which denotes the density of an attached or monolayer culture (e.g., cell culture).&quot; [MGED:MGED]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000195">
         <oboInOwl1:hasExactSynonym>F</oboInOwl1:hasExactSynonym>
@@ -33105,8 +33594,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000201">
         <oboInOwl1:hasExactSynonym>cells per ml</oboInOwl1:hasExactSynonym>
-        <rdfs:comment>&quot;A unit of cell concentration which is equal to one cell in a volume of 1 milliliter.&quot; [Bioedonline:Bioedonline]</rdfs:comment>
         <oboInOwl1:hasExactSynonym>cells per millilitre</oboInOwl1:hasExactSynonym>
+        <rdfs:comment>&quot;A unit of cell concentration which is equal to one cell in a volume of 1 milliliter.&quot; [Bioedonline:Bioedonline]</rdfs:comment>
         <rdfs:label>cells per milliliter</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000203">
@@ -33139,13 +33628,13 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <obo:IAO_0000111>milliliter per liter</obo:IAO_0000111>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000208">
-        <obo:IAO_0000111>gram per deciliter</obo:IAO_0000111>
         <rdfs:comment>&quot;A mass density unit which is equal to mass of an object in grams divided by the volume in deciliters.&quot; [UOC:GVG]</rdfs:comment>
+        <obo:IAO_0000111>gram per deciliter</obo:IAO_0000111>
         <oboInOwl1:hasExactSynonym>g/dl</oboInOwl1:hasExactSynonym>
         <oboInOwl1:hasExactSynonym>gram per decilitre</oboInOwl1:hasExactSynonym>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
-        <rdfs:label>gram per deciliter</rdfs:label>
         <obo:IAO_0000115>A mass density unit which is equal to mass of an object in grams divided by the volume in deciliters.</obo:IAO_0000115>
+        <rdfs:label>gram per deciliter</rdfs:label>
         <obo:IAO_0000118>g/dl</obo:IAO_0000118>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000209">
@@ -33165,8 +33654,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:comment>&quot;A dimensionless count unit which a measure of plague forming units in a given volume.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000212">
-        <rdfs:label>colony forming unit per volume</rdfs:label>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
+        <rdfs:label>colony forming unit per volume</rdfs:label>
         <obo:IAO_0000111>colony forming unit per volume</obo:IAO_0000111>
         <rdfs:comment>&quot;A concentration unit which a measure of viable bacterial numbers in a given volume.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
         <obo:IAO_0000115>A concentration unit which a measure of viable bacterial numbers in a given volume.</obo:IAO_0000115>
@@ -33202,8 +33691,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <oboInOwl1:hasExactSynonym>Da</oboInOwl1:hasExactSynonym>
         <rdfs:label>dalton</rdfs:label>
         <oboInOwl1:hasExactSynonym>u</oboInOwl1:hasExactSynonym>
-        <oboInOwl1:hasExactSynonym>amu</oboInOwl1:hasExactSynonym>
         <oboInOwl1:hasExactSynonym>unified atomic mass unit</oboInOwl1:hasExactSynonym>
+        <oboInOwl1:hasExactSynonym>amu</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;An independently to the base SI units defined mass unit which is equal to one twelfth of the mass of an unbound atom of the carbon-12 nuclide, at rest and in its ground state.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000222">
@@ -33282,8 +33771,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000242">
         <oboInOwl1:hasExactSynonym>pixel density</oboInOwl1:hasExactSynonym>
-        <rdfs:comment>&quot;A spatial resolution unit which is a standard measure of the resolution of a computer display, related to the size of the display in inches and the total number of pixels in the horizontal and vertical directions.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
         <rdfs:label>pixels per inch</rdfs:label>
+        <rdfs:comment>&quot;A spatial resolution unit which is a standard measure of the resolution of a computer display, related to the size of the display in inches and the total number of pixels in the horizontal and vertical directions.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
         <oboInOwl1:hasExactSynonym>ppi</oboInOwl1:hasExactSynonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000243">
@@ -33317,8 +33806,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:label>kilovolt</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000249">
-        <oboInOwl1:hasExactSynonym>uV</oboInOwl1:hasExactSynonym>
         <rdfs:label>microvolt</rdfs:label>
+        <oboInOwl1:hasExactSynonym>uV</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;An electric potential difference unit which is equal to one millionth of a volt or 10^[-6] V.&quot; [UOC:GVG]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000250">
@@ -33401,8 +33890,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <obo:IAO_0000115>A volumetric flow rate unit which is equal to one microliter volume through a given surface in one minute.</obo:IAO_0000115>
         <rdfs:label>microliters per minute</rdfs:label>
-        <oboInOwl1:hasExactSynonym>uL/min</oboInOwl1:hasExactSynonym>
         <oboInOwl1:hasExactSynonym>microlitres per minute</oboInOwl1:hasExactSynonym>
+        <oboInOwl1:hasExactSynonym>uL/min</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;A volumetric flow rate unit which is equal to one microliter volume through a given surface in one minute.&quot; [UOC:GVG]</rdfs:comment>
         <obo:IAO_0000111>microliters per minute</obo:IAO_0000111>
     </rdf:Description>
@@ -33453,13 +33942,13 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <obo:IAO_0000115>A rate unit which is equal to one over one molar second.</obo:IAO_0000115>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000283">
-        <rdfs:comment>&quot;An area density unit which is equal to the mass of an object in kilograms divided by the surface area in hectares.&quot; [UO:GVG]</rdfs:comment>
         <rdfs:label>kilogram per hectare</rdfs:label>
+        <rdfs:comment>&quot;An area density unit which is equal to the mass of an object in kilograms divided by the surface area in hectares.&quot; [UO:GVG]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000284">
         <obo:IAO_0000115>A rate unit which is equal to one over one nanomolar.</obo:IAO_0000115>
-        <oboInOwl1:hasExactSynonym>1/nM</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;A rate unit which is equal to one over one nanomolar.&quot; [UO:GVG]</rdfs:comment>
+        <oboInOwl1:hasExactSynonym>1/nM</oboInOwl1:hasExactSynonym>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <rdfs:label>count per nanomolar</rdfs:label>
         <obo:IAO_0000111>count per nanomolar</obo:IAO_0000111>
@@ -33515,8 +34004,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000325">
         <oboInOwl1:hasRelatedSynonym>mH</oboInOwl1:hasRelatedSynonym>
-        <rdfs:comment>&quot;A frequency unit which is equal to one million hertz or 10^[6] V.&quot; [UOC:GVG]</rdfs:comment>
         <rdfs:label>megaHertz</rdfs:label>
+        <rdfs:comment>&quot;A frequency unit which is equal to one million hertz or 10^[6] V.&quot; [UOC:GVG]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000326">
         <oboInOwl1:hasExactSynonym>cM</oboInOwl1:hasExactSynonym>
@@ -33572,8 +34061,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <oboInOwl1:hasExactSynonym>mDa</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;A mass unit which is equal to 1/12 the mass of 12C&quot; [Wikipedia:Wikipedia]</rdfs:comment>
         <oboInOwl1:hasExactSynonym>milli unified atomic mass unit</oboInOwl1:hasExactSynonym>
-        <rdfs:label>milli</rdfs:label>
         <oboInOwl1:hasExactSynonym>millidalton</oboInOwl1:hasExactSynonym>
+        <rdfs:label>milli</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0010010">
         <rdfs:label>hectare</rdfs:label>
@@ -33612,8 +34101,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:label>furlong</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0010017">
-        <oboInOwl1:hasExactSynonym>mi</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;A length unit which is equal to 1,609.344 metres, or 8 furlongs.&quot; [Wikipedia:Wikpiedia]</rdfs:comment>
+        <oboInOwl1:hasExactSynonym>mi</oboInOwl1:hasExactSynonym>
         <rdfs:label>mile</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0010018">
@@ -33666,14 +34155,14 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:comment>&quot;An imperial volume unit which is equivalent to 568.261,25 millilitres.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0010029">
-        <oboInOwl1:hasExactSynonym>qt</oboInOwl1:hasExactSynonym>
         <rdfs:label>quart</rdfs:label>
+        <oboInOwl1:hasExactSynonym>qt</oboInOwl1:hasExactSynonym>
         <rdfs:comment>&quot;An imperial volume unit which is equivalent to 1,136.5225 millilitres, or two pints.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0010030">
         <rdfs:label>gallon</rdfs:label>
-        <rdfs:comment>&quot;An imperial volume unit which is equivalent to 4,546.09 millilitres, or 8 pints.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
         <oboInOwl1:hasExactSynonym>gal</oboInOwl1:hasExactSynonym>
+        <rdfs:comment>&quot;An imperial volume unit which is equivalent to 4,546.09 millilitres, or 8 pints.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0010031">
         <oboInOwl1:hasExactSynonym>gr</oboInOwl1:hasExactSynonym>
@@ -33708,8 +34197,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0010037">
         <rdfs:label>hundredweight</rdfs:label>
-        <rdfs:comment>&quot;An imperial mass unit which is equivalent to 50.802,345,44 kilograms, 112 pounds, or 8 stone.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
         <oboInOwl1:hasExactSynonym>cwt</oboInOwl1:hasExactSynonym>
+        <rdfs:comment>&quot;An imperial mass unit which is equivalent to 50.802,345,44 kilograms, 112 pounds, or 8 stone.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0010038">
         <rdfs:comment>&quot;An imperial mass unit which is equivalent to 1,016.046,9088 kilograms, or 2,240 pounds.&quot; [Wikipedia:Wikipedia]</rdfs:comment>
