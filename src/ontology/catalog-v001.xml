@@ -27,17 +27,17 @@
   <uri name="http://purl.obolibrary.org/obo/rbo/imports/efo_import.owl" uri="imports/efo_import.owl"/>
   <uri name="http://purl.obolibrary.org/obo/rbo/imports/efo_import.obo" uri="imports/efo_import.obo"/>
 
-  <uri name="http://purl.obolibrary.org/obo/rbo/imports/efo_import.owl" uri="imports/go_import.owl"/>
-  <uri name="http://purl.obolibrary.org/obo/rbo/imports/efo_import.obo" uri="imports/go_import.obo"/>
+  <uri name="http://purl.obolibrary.org/obo/rbo/imports/go_import.owl" uri="imports/go_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/rbo/imports/go_import.obo" uri="imports/go_import.obo"/>
 
-  <uri name="http://purl.obolibrary.org/obo/rbo/imports/efo_import.owl" uri="imports/mpath_import.owl"/>
-  <uri name="http://purl.obolibrary.org/obo/rbo/imports/efo_import.obo" uri="imports/mpath_import.obo"/>
+  <uri name="http://purl.obolibrary.org/obo/rbo/imports/mpath_import.owl" uri="imports/mpath_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/rbo/imports/mpath_import.obo" uri="imports/mpath_import.obo"/>
 
-  <uri name="http://purl.obolibrary.org/obo/rbo/imports/efo_import.owl" uri="imports/ogms_import.owl"/>
-  <uri name="http://purl.obolibrary.org/obo/rbo/imports/efo_import.obo" uri="imports/ogms_import.obo"/>
+  <uri name="http://purl.obolibrary.org/obo/rbo/imports/ogms_import.owl" uri="imports/ogms_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/rbo/imports/ogms_import.obo" uri="imports/ogms_import.obo"/>
 
-  <uri name="http://purl.obolibrary.org/obo/rbo/imports/efo_import.owl" uri="imports/uberon_import.owl"/>
-  <uri name="http://purl.obolibrary.org/obo/rbo/imports/efo_import.obo" uri="imports/uberon_import.obo"/>
+  <uri name="http://purl.obolibrary.org/obo/rbo/imports/uberon_import.owl" uri="imports/uberon_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/rbo/imports/uberon_import.obo" uri="imports/uberon_import.obo"/>
 
   <uri name="http://purl.obolibrary.org/obo/rbo/components/all_templates.owl" uri="components/all_templates.owl"/>
   

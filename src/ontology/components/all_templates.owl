@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/rbo/components/all_templates.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/rbo/releases/2021-01-15/components/all_templates.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/rbo/releases/2021-01-27/components/all_templates.owl"/>
     </owl:Ontology>
     
 
@@ -1197,6 +1197,290 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MESH:D009688</oboInOwl:hasDbXref>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nuclear reactor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001000">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">challenge assay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001001">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biochemical challenge assay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001002">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genetic modification challenge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001003">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">immunological challenge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001004">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infectious agent challenge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001005">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral buffered formalin fixed sample</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001006">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feketes solution fixed specimen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001007">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bouin&apos;s solution fixed specimen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001008">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiobiology investigation factor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001009">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ionising radiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001010">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acoustic radiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001011">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">charged particle beam radiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001012">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutron beam radiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001013">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heavy ion radiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001014">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fe ion radiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001015">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c ion radiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001016">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x (photon) radiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001017">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infrared radiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001018">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microwave radiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001019">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rf radiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001020">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation dose rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001021">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high radiation dose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001022">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low radiation dose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001023">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high radiation dose rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001024">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low radiation dose rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001025 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001025">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation linear energy transfer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001026">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high linear energy transfer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001027">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low linear energy transfer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001028">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">study group of 101-1000 individuals</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">large population cohort</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001029">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">study group of more than 1000 individuals</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">very large population cohort</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001030">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">juvenile stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001031">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fetal stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001032">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">old</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001033">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">study group of 11-100 individuals</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">small population cohort</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RBO_00001034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RBO_00001034">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">study group of 1-10 individuals</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">very small population cohort</rdfs:label>
     </owl:Class>
     
 
