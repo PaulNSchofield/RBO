@@ -1,0 +1,6 @@
+obo:MPATH_175
+obo:MPATH_188
+obo:MPATH_597
+obo:MPATH_599
+obo:MPATH_604
+obo:MPATH_606

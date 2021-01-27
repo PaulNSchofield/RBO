@@ -120,3 +120,38 @@ obo:RBO_00000119	lifetime risk estimate														obo:RBO_00000118				NCIT:C1
 obo:RBO_00000120	gamma radiation														obo:RBO_00000114				NCIT:C44386															
 obo:RBO_00000121	particle accelerator														OBI:0000968				NCIT:C94854															
 obo:RBO_00000122	nuclear reactor														OBI:0000968				MESH:D009688															
+obo:RBO_00001000	challenge assay				
+obo:RBO_00001001	biochemical challenge assay				
+obo:RBO_00001002	genetic modification challenge				
+obo:RBO_00001003	immunological challenge				
+obo:RBO_00001004	infectious agent challenge				
+obo:RBO_00001005	neutral buffered formalin fixed sample				
+obo:RBO_00001006	feketes solution fixed specimen				
+obo:RBO_00001007	bouin's solution fixed specimen				
+obo:RBO_00001008	radiobiology investigation factor				
+obo:RBO_00001009	ionising radiation				
+obo:RBO_00001010	acoustic radiation				
+obo:RBO_00001011	charged particle beam radiation				
+obo:RBO_00001012	neutron beam radiation				
+obo:RBO_00001013	heavy ion radiation				
+obo:RBO_00001014	fe ion radiation				
+obo:RBO_00001015	c ion radiation				
+obo:RBO_00001016	x (photon) radiation				
+obo:RBO_00001017	infrared radiation				
+obo:RBO_00001018	microwave radiation				
+obo:RBO_00001019	rf radiation				
+obo:RBO_00001020	radiation dose rate				
+obo:RBO_00001021	high radiation dose				
+obo:RBO_00001022	low radiation dose				
+obo:RBO_00001023	high radiation dose rate				
+obo:RBO_00001024	low radiation dose rate				
+obo:RBO_00001025	radiation linear energy transfer				
+obo:RBO_00001026	high linear energy transfer				
+obo:RBO_00001027	low linear energy transfer				
+obo:RBO_00001028	large population cohort				study group of 101-1000 individuals
+obo:RBO_00001029	very large population cohort				study group of more than 1000 individuals
+obo:RBO_00001030	juvenile stage				
+obo:RBO_00001031	fetal stage				
+obo:RBO_00001032	old				
+obo:RBO_00001033	small population cohort				study group of 11-100 individuals
+obo:RBO_00001034	very small population cohort				study group of 1-10 individuals

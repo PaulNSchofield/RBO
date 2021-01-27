@@ -75,7 +75,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  ro bfo pato chmo envo obi uo
+IMPORTS =  ro bfo pato chmo envo obi uo chebi efo go mpath ncbitaxon ogms omiabis uberon
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -327,7 +327,77 @@ mirror/uo.owl: mirror/uo.trigger
 
 .PRECIOUS: mirror/%.owl
 
+## ONTOLOGY: chebi
+## Copy of chebi is re-downloaded whenever source changes
+mirror/chebi.trigger: $(SRC)
 
+mirror/chebi.owl: mirror/chebi.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/chebi.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+## ONTOLOGY: efo
+## Copy of efo is re-downloaded whenever source changes
+mirror/efo.trigger: $(SRC)
+
+mirror/efo.owl: mirror/efo.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I https://github.com/EBISPOT/efo/releases/download/v3.26.0/efo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+## ONTOLOGY: go 
+## Copy of go is re-downloaded whenever source changes
+mirror/go.trigger: $(SRC)
+
+mirror/go.owl: mirror/go.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/go.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+## ONTOLOGY: mpath 
+## Copy of mpath is re-downloaded whenever source changes
+mirror/mpath.trigger: $(SRC)
+
+mirror/mpath.owl: mirror/mpath.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/mpath.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+## ONTOLOGY: ncbitaxon
+## Copy of mpath is re-downloaded whenever source changes
+mirror/ncbitaxon.trigger: $(SRC)
+
+mirror/ncbitaxon.owl: mirror/ncbitaxon.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/ncbitaxon.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+## ONTOLOGY: ogms
+## Copy of ogms is re-downloaded whenever source changes
+mirror/ogms.trigger: $(SRC)
+
+mirror/ogms.owl: mirror/ogms.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/ogms.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+## ONTOLOGY: omiabis
+## Copy of omiabis is re-downloaded whenever source changes
+mirror/omiabis.trigger: $(SRC)
+
+mirror/omiabis.owl: mirror/omiabis.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I https://raw.githubusercontent.com/OMIABIS/omiabis-dev/master/BFO2%20omiabis/omiabis_merged.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+## ONTOLOGY: uberon
+## Copy of uberon is re-downloaded whenever source changes
+mirror/uberon.trigger: $(SRC)
+
+mirror/uberon.owl: mirror/uberon.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/uberon.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
 
 # ----------------------------------------
 # Subsets
