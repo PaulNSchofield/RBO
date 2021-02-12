@@ -124,3 +124,40 @@ obo:RBO_00000123	biological process														BFO:0000015				GO:0008150
 obo:RBO_00000124	cellular process														obo:RBO_00000123				GO:0009987															
 obo:RBO_00005001	heavy ion radiation				An atomic nucleus with two or more protons and kinetic energy imparted by natural or artificial means																													
 obo:RBO_00005002	light ion radiation				An atomic nucleus, variously defined as having 2, 3, 4, 5, or 6 protons and kinetic energy imparted by natural or artificial means																													
+obo:RBO_00000500	temporary parent
+obo:RBO_00000501	ion								Paul Schofield						obo:RBO_00000500				CHEBI_24870
+obo:RBO_00000502	challenge assay								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000503	biochemical challenge assay								Paul Schofield						obo:RBO_00000502				
+obo:RBO_00000504	genetic modification challenge								Paul Schofield						obo:RBO_00000502				
+obo:RBO_00000505	immunological challenge								Paul Schofield						obo:RBO_00000502				
+obo:RBO_00000506	infectious agent challenge								Paul Schofield						obo:RBO_00000505				
+obo:RBO_00000507	neutral buffered formalin fixed sample								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000508	feketes solution fixed specimen								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000509	bouin's solution fixed specimen								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000510	radiobiology investigation factor								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000511	ionising radiation								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000512	acoustic radiation								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000513	charged particle beam radiation								Paul Schofield						obo:RBO_00000511				
+obo:RBO_00000514	neutron beam radiation								Paul Schofield						obo:RBO_00000511				
+obo:RBO_00000515	heavy ion radiation								Paul Schofield						obo:RBO_00000511				
+obo:RBO_00000516	fe ion radiation								Paul Schofield						obo:RBO_00000515				
+obo:RBO_00000517	c ion radiation								Paul Schofield						obo:RBO_00000515				
+obo:RBO_00000518	x (photon) radiation								Paul Schofield						obo:RBO_00000511				
+obo:RBO_00000519	infrared radiation								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000520	microwave radiation								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000521	rf radiation								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000522	radiation dose rate								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000523	high radiation dose								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000524	low radiation dose								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000525	high radiation dose rate								Paul Schofield						obo:RBO_00000522				
+obo:RBO_00000526	low radiation dose rate								Paul Schofield						obo:RBO_00000522				
+obo:RBO_00000527	radiation linear energy transfer								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000528	high linear energy transfer								Paul Schofield						obo:RBO_00000527				
+obo:RBO_00000529	low linear energy transfer								Paul Schofield						obo:RBO_00000527				
+obo:RBO_00000530	large population cohort				study group of 101-1000 individuals				Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000531	very large population cohort				study group of more than 1000 individuals				Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000532	juvenile stage								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000533	fetal stage								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000534	old								Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000535	small population cohort				study group of 11-100 individuals				Paul Schofield						obo:RBO_00000500				
+obo:RBO_00000536	very small population cohort				study group of 1-10 individuals				Paul Schofield						obo:RBO_00000500				
